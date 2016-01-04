@@ -1,0 +1,9 @@
+mongo:
+  image: mongo:3.0.7
+
+xhgui:
+  build: ./build/
+  links:
+    - mongo
+  ports:
+    - "8083:8083"
